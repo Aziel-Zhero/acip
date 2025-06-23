@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ACIP Pindamonhangaba - Associação Comercial e Empresarial" />
+  <meta name="keywords" content="ACIP, Pindamonhangaba, Associação Comercial, Empresarial, Serviços, Certificado Digital, Clube de Descontos" />
+  <meta name="author" content="ACIP Pindamonhangaba" />
+  <title>ACIP | Pindamonhangaba</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="public/acip_logo.png">
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Estilos adicionais -->
+  <style>
+    #whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 50;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 scroll-smooth">
+
+  <!-- ================= MENU ================= -->
+  <header class="bg-green-700 text-white sticky top-0 z-40 shadow-md">
+    <div class="container mx-auto px-4 flex justify-between items-center py-4">
+      <img src="public/acip_logo.png" alt="Logo ACIP" class="h-16 w-auto">
+
+      <nav class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="#inicio" class="hover:text-red-400">Início</a>
+        <a href="#historia" class="hover:text-red-400">História</a>
+        <a href="#cidade" class="hover:text-red-400">A Cidade</a>
+        <a href="#servicos" class="hover:text-red-400">Serviços</a>
+        <a href="#certificado" class="hover:text-red-400">Certificado Digital</a>
+        <a href="#descontos" class="hover:text-red-400">Clube de Descontos</a>
+        <a href="#contato" class="hover:text-red-400">Contato</a>
+      </nav>
+
+      <button id="menuBtn" class="md:hidden">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <a href="#inicio" class="block py-1">Início</a>
+      <a href="#historia" class="block py-1">História</a>
+      <a href="#cidade" class="block py-1">A Cidade</a>
+      <a href="#servicos" class="block py-1">Serviços</a>
+      <a href="#certificado" class="block py-1">Certificado Digital</a>
+      <a href="#descontos" class="block py-1">Clube de Descontos</a>
+      <a href="#contato" class="block py-1">Contato</a>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="inicio" class="w-full h-[300px] bg-cover bg-center" style="background-image: url('https://via.placeholder.com/1200x300')"></section>
+
+  <!-- ================= SERVIÇOS ================= -->
+  <section id="servicos" class="container mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold text-center text-green-700 mb-12">Nossos Serviços</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="service-card bg-white border rounded-lg shadow p-6 transform hover:scale-105 transition">
+        <div class="flex items-center space-x-2 text-red-600 mb-4">
+          <i data-lucide="briefcase" class="w-6 h-6"></i>
+          <h3 class="text-xl font-semibold">Serviços Empresariais</h3>
+        </div>
+        <p>Consultorias, promoções e certificações para empresários.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card bg-white border rounded-lg shadow p-6 transform hover:scale-105 transition">
+        <div class="flex items-center space-x-2 text-red-600 mb-4">
+          <i data-lucide="stethoscope" class="w-6 h-6"></i>
+          <h3 class="text-xl font-semibold">Serviços Médicos</h3>
+        </div>
+        <p>Planos de saúde Unimed e atendimento ocupacional.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card bg-white border rounded-lg shadow p-6 transform hover:scale-105 transition">
+        <div class="flex items-center space-x-2 text-red-600 mb-4">
+          <i data-lucide="users" class="w-6 h-6"></i>
+          <h3 class="text-xl font-semibold">Parcerias & Convênios</h3>
+        </div>
+        <p>Descontos com comércios locais para associados.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CLUBE DE DESCONTOS ================= -->
+  <section id="descontos" class="bg-gray-100 py-16">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center text-green-700 mb-6">Clube de Descontos</h2>
+      <div class="swiper-container rounded-lg">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="https://via.placeholder.com/150" class="rounded-lg" /></div>
+          <div class="swiper-slide"><img src="https://via.placeholder.com/150" class="rounded-lg" /></div>
+          <div class="swiper-slide"><img src="https://via.placeholder.com/150" class="rounded-lg" /></div>
+          <div class="swiper-slide"><img src="https://via.placeholder.com/150" class="rounded-lg" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= YOUTUBE ================= -->
+  <section id="youtube" class="bg-red-100 py-16 text-center">
+    <h2 class="text-3xl font-bold text-green-700 mb-6">Nosso Canal no YouTube</h2>
+    <p class="mb-4">Veja nossos bate-papos, eventos e momentos históricos.</p>
+    <a href="https://www.youtube.com/@acipinda" target="_blank" class="text-white bg-red-600 px-5 py-3 rounded hover:bg-red-700">Acessar Canal</a>
+  </section>
+
+  <!-- ================= EMPREGOS ================= -->
+  <section id="empregos" class="container mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold text-center text-green-700 mb-6">Oportunidades de Emprego</h2>
+    <ul class="grid md:grid-cols-2 gap-6">
+      <li class="p-4 border rounded shadow">Portal Emprega Brasil – <a href="#" class="text-red-600 underline">Acessar</a></li>
+      <li class="p-4 border rounded shadow">Programa Via Rápida – <a href="#" class="text-red-600 underline">Saiba mais</a></li>
+    </ul>
+  </section>
+
+  <!-- ================= NOTÍCIAS ================= -->
+  <section id="noticias" class="bg-gray-100 py-16 px-4">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center text-green-700 mb-6">Últimas Notícias</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-white p-4 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">Palestra com Gustavo Segré</h3>
+          <p>Confira fotos e momentos do evento econômico realizado pela ACIP.</p>
+        </article>
+        <article class="bg-white p-4 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">Calendário do PIS/PASEP</h3>
+          <p>Veja as datas de pagamento atualizadas para este ano.</p>
+        </article>
+        <article class="bg-white p-4 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">Copa na Praça</h3>
+          <p>Eventos públicos com transmissão dos jogos em Pindamonhangaba.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTATO ================= -->
+  <section id="contato" class="py-16 text-center bg-green-100">
+    <h2 class="text-3xl font-bold text-green-700 mb-4">Entre em Contato</h2>
+    <p>📞 (12) 3644-7100 • 📍 Rua Deputado Claro César, 44 – Centro</p>
+  </section>
+
+  <!-- ================= WHATSAPP FLOAT ================= -->
+  <a href="https://wa.me/551236447100" target="_blank" id="whatsapp-float" class="bg-green-600 p-3 rounded-full shadow-lg hover:bg-green-700 transition">
+    <i data-lucide="message-circle" class="text-white w-6 h-6"></i>
+  </a>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-green-700 text-white text-center py-6">
+    <p>© 2025 ACIP Pindamonhangaba • Todos os direitos reservados</p>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Ícones
+    lucide.createIcons();
+
+    // GSAP animações com ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+    document.querySelectorAll(".service-card").forEach((el) => {
+      gsap.from(el, {
+        scrollTrigger: el,
+        duration: 0.8,
+        opacity: 0,
+        y: 50,
+        ease: "power2.out",
+      });
+    });
+
+    // Swiper init
+    new Swiper(".swiper-container", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: { delay: 2500 },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+    });
+
+    // Menu Mobile toggle
+    document.getElementById("menuBtn").onclick = () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    };
+  </script>
+</body>
+</html>
